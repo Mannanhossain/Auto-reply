@@ -1,5 +1,6 @@
-fastapi
-uvicorn[standard]
-sqlalchemy
-python-dotenv
-twilio
+fastapi==0.101.1
+uvicorn[standard]==0.23.2
+SQLAlchemy==2.0.21
+pydantic==2.6.2
+twilio==8.13.0
+python-dotenv==1.0.0
