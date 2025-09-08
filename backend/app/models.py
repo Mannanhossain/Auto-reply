@@ -1,10 +1,10 @@
-# backend/app/models.py
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, DateTime
 from .db import Base
+from datetime import datetime
 
 class MissedCall(Base):
     __tablename__ = "missed_calls"
 
     id = Column(Integer, primary_key=True, index=True)
-    caller_number = Column(String, index=True)
-    timestamp = Column(String)
+    phone_number = Column(String, nullable=False)  # Must match the keyword
+    timestamp = Column(DateTime, default=datetime.utcnow)
