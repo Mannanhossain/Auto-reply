@@ -8,7 +8,7 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Missed Call Project API")
 
-API_KEY = "supersecret"  # change your API key
+API_KEY = "my_missedcall_key123" 
 
 @app.post("/webhook/missed_call")
 def missed_call_webhook(payload: schemas.MissedCall, x_api_key: str = Header(...)):
